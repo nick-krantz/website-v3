@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  background-color: #002f34;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  min-width: 100vw;
+}
+
+section {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+  margin: 1rem 0
+}
+
+h1 > span {
+  color: #ff6a30
+}
+
+.container {
+  position: relative;
+  width: 75%;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.small-screen {
+  display: none;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15%;
+  margin: -7.5%;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+a:hover svg,
+a:focus svg {
+  transform: scale(1.2);
+}
+
+a:hover>svg path,
+a:focus>svg path,
+a:hover>svg rect,
+a:focus>svg rect,
+a:hover>svg polyline,
+a:focus>svg polyline {
+  stroke: #ff6a30 !important;
+}
+
+a:hover>svg.github path,
+a:focus>svg.github path {
+  fill: #ff6a30 !important;
+}
+
+svg {
+  transition: transform 0.3s;
+}
+
+svg path,
+svg rect,
+svg polyline {
+  transition: stroke 0.3s;
+}
+
+.deg0 {
+  animation-name: fadeInTop;
+}
+
+.deg72 {
+  animation-name: fadeInTopRight;
+}
+
+.deg144 {
+  animation-name: fadeInBottomRight;
+}
+
+.deg216 {
+  animation-name: fadeInBottomLeft;
+}
+
+.deg288 {
+  animation-name: fadeInTopLeft;
+}
+
+/* Easter Eggs */
+.very-small-screen {
+  display: none;
+}
+
+@media (max-width: 12.5rem) {
+  section {
+    display: block
+  }
+  .very-small-screen {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .container {
+    display: none;
+  }
+}
+
+@media (max-height: 22rem) {
+  section {
+    display: block
+  }
+  .very-small-screen {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .container {
+    display: none;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 58rem) {
+  .container { 
+    width: 95%
+  }
+  a {
+    width: 12%;
+    margin: -6%
+  }
+}
+
+@media (max-width: 49rem), (max-height: 56rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 38rem), (max-height: 45rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 34rem), (max-height: 42rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 18rem), (max-height: 38rem) {
+  .non-small-screen {
+    display: none;
+  }
+  .small-screen {
+    display: block;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  a {
+    width: 10%;
+    margin: -4%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) translateX(min(58vw, 680px)) rotate(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-90deg) translateX(min(min(min(43vw, 40vh), 40vh), 480px)) rotate(90deg);
+  }
+}
+
+@keyframes fadeInTopRight {
+  0% {
+    opacity: 0;
+    transform: rotate(-18deg) translate(min(58vw, 680px)) rotate(18deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-18deg) translate(min(min(43vw, 40vh), 480px)) rotate(18deg);
+  }
+}
+
+@keyframes fadeInBottomRight {
+  0% {
+    opacity: 0;
+    transform: rotate(54deg) translate(min(58vw, 680px)) rotate(-54deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(54deg) translate(min(min(43vw, 40vh), 480px)) rotate(-54deg);
+  }
+}
+
+@keyframes fadeInBottomLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(126deg) translate(min(58vw, 680px)) rotate(-126deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(126deg) translate(min(min(43vw, 40vh), 480px)) rotate(-126deg);
+  }
+}
+
+@keyframes fadeInTopLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(198deg) translate(min(58vw, 680px)) rotate(-198deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(198deg) translate(min(min(43vw, 40vh), 480px)) rotate(-198deg);
+  }
+}

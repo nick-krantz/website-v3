@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  background-color: #002f34;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 60rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: .25rem 0
+}
+
+p {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+ol {
+  text-align: left;
+}
+
+li {
+  margin: 2rem 0;
+}
+
+li::marker {
+  font-size: 2rem;
+}
+
+li > p {
+  margin: 0;
+  max-width: 60rem;
+}
+
+a {
+  color: white
+}
